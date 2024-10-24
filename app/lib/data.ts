@@ -9,6 +9,16 @@ import {
 } from './definitions';
 import { formatCurrency } from './utils';
 
+export async function createInvoice(formData: FormData) {
+  const rawFormData = {
+    customerId: formData.get('customerId'),
+    amount: formData.get('amount'),
+    status: formData.get('status'),
+  };
+  // Test it out:
+  console.log(rawFormData);
+}
+
 export async function fetchRevenue() {
   try {
     // Artificially delay a response for demo purposes.
